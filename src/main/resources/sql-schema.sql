@@ -1,12 +1,26 @@
-drop schema ims;
+   drop schema ims;
 
-CREATE SCHEMA IF NOT EXISTS `ims`;
+   CREATE SCHEMA IF NOT EXISTS `ims`;
 
-USE `ims` ;
+   USE `ims` ;
 
-CREATE TABLE IF NOT EXISTS `ims`.`customers` (
-    `id` INT(11) NOT NULL AUTO_INCREMENT,
-    `first_name` VARCHAR(40) DEFAULT NULL,
-    `surname` VARCHAR(40) DEFAULT NULL,
-    PRIMARY KEY (`id`)
-);
+   CREATE TABLE IF NOT EXISTS `ims`.`customers` (
+       `id` INT(11) NOT NULL AUTO_INCREMENT,
+       `first_name` VARCHAR(40) DEFAULT NULL,
+       `surname` VARCHAR(40) DEFAULT NULL,
+       PRIMARY KEY (`id`)
+  );
+  
+    CREATE TABLE IF NOT EXISTS `ims`.`items` (
+       `item_id` INT(11) NOT NULL AUTO_INCREMENT,
+       `item_name` VARCHAR(40) DEFAULT NULL,
+       `item_cost` DOUBLE(10, 2) DEFAULT NULL,
+       PRIMARY KEY (`item_id`)
+  );
+  
+   CREATE TABLE IF NOT EXISTS `ims`.`orders` (
+       `order_id` INT(11) NOT NULL AUTO_INCREMENT,
+       `order_name` VARCHAR(40) DEFAULT NULL,
+	   `order_total` DOUBLE(10, 2) DEFAULT NULL,
+       PRIMARY KEY (`order_id`)
+  ); 
