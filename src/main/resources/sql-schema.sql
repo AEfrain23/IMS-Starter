@@ -8,6 +8,7 @@
        `id` INT(11) NOT NULL AUTO_INCREMENT,
        `first_name` VARCHAR(40) DEFAULT NULL,
        `surname` VARCHAR(40) DEFAULT NULL,
+       `address` VARCHAR(50) DEFAULT NULL,
        PRIMARY KEY (`id`)
   );
   
@@ -20,7 +21,6 @@
   
    CREATE TABLE IF NOT EXISTS `ims`.`orders` (
        `order_id` INT(11) NOT NULL AUTO_INCREMENT,
-       `order_name` VARCHAR(40) DEFAULT NULL,
 	   `order_total` DOUBLE(10, 2) DEFAULT NULL,
        PRIMARY KEY (`order_id`)
   ); 

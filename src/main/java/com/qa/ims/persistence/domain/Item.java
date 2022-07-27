@@ -7,6 +7,11 @@ public class Item {
 	private Double itemCost;
 	
 	
+	public Item(String itemName, Double itemCost) {
+		this.setItemName(itemName);
+		this.setItemCost(itemCost);
+	}
+	
 	public Item(Long itemId, String itemName, double itemCost) {
 		this.setItemId(itemId);
 		this.setItemName(itemName);
