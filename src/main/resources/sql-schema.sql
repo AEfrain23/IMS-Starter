@@ -21,6 +21,10 @@
   
    CREATE TABLE IF NOT EXISTS `ims`.`orders` (
        `order_id` INT(11) NOT NULL AUTO_INCREMENT,
+	   `customer_id` INT(11) NOT NULL,
 	   `order_total` DOUBLE(10, 2) DEFAULT NULL,
        PRIMARY KEY (`order_id`)
   ); 
+  
+  
+  
