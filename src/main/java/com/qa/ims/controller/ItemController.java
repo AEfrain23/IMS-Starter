@@ -22,7 +22,7 @@ public class ItemController implements CrudController<Item> {
 
 	public ItemController(ItemDAO itemDAO, Utils utils) {
 		super();
-		this.itemDAO = ItemDAO;
+		this.itemDAO = itemDAO;
 		this.utils = utils;
 	}
 
@@ -33,7 +33,7 @@ public class ItemController implements CrudController<Item> {
 	public List<Item> readAll() {
 		List<Item> items = itemDAO.readAll();
 		for (Item item : items) {
-			LOGGER.info(items);
+			LOGGER.info(item);
 		}
 		return items;
 	}

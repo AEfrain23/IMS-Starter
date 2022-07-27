@@ -22,7 +22,7 @@ public class ItemDAO implements Dao<Item> {
 	public Item modelFromResultSet(ResultSet resultSet) throws SQLException {
 		Long itemId = resultSet.getLong("item_id");
 		String itemName = resultSet.getString("item_name");
-		double itemCost = resultSet.getDouble("item_cost");
+		Double itemCost = resultSet.getDouble("item_cost");
 		return new Item(itemId, itemName, itemCost);
 	}
 
@@ -51,7 +51,7 @@ public class ItemDAO implements Dao<Item> {
 	public Item readLatest() {
 		try (Connection connection = DBUtils.getInstance().getConnection();
 				Statement statement = connection.createStatement();
-				ResultSet resultSet = statement.executeQuery("SELECT * FROM item ORDER BY id DESC LIMIT 1");) {
+				ResultSet resultSet = statement.executeQuery("SELECT * FROM items ORDER BY item_id DESC LIMIT 1");) {
 			resultSet.next();
 			return modelFromResultSet(resultSet);
 		} catch (Exception e) {
@@ -64,7 +64,7 @@ public class ItemDAO implements Dao<Item> {
 	/**
 	 * Creates a item in the database
 	 * 
-	 * @param item - takes in a item object. id will be ignored
+	 * @param item - takes in a item object. item_id will be ignored
 	 */
 	@Override
 	public Item create(Item item) {
@@ -72,7 +72,7 @@ public class ItemDAO implements Dao<Item> {
 				PreparedStatement statement = connection
 						.prepareStatement("INSERT INTO items(item_name, item_cost) VALUES (?, ?)");) {
 			statement.setString(1, item.getItemName());
-			statement.setDouble(2, item.getItemId());
+			statement.setDouble(2, item.getItemCost());
 			statement.executeUpdate();
 			return readLatest();
 		} catch (Exception e) {
@@ -101,7 +101,7 @@ public class ItemDAO implements Dao<Item> {
 	/**
 	 * Updates a item in the database
 	 * 
-	 * @param item - takes in a item object, the item_id field will be used to
+	 * @param item - takes in a item object, the id field will be used to
 	 *                 update that item in the database
 	 * @return
 	 */
@@ -125,7 +125,7 @@ public class ItemDAO implements Dao<Item> {
 	/**
 	 * Deletes a item in the database
 	 * 
-	 * @param id - id of the item
+	 * @param item_id - id of the item
 	 */
 	@Override
 	public int delete(long itemId) {
