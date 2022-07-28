@@ -38,7 +38,7 @@ public class Order {
 
 	@Override
 	public String toString() {
-		return "order id:" + orderId + "customer id:" + customerId;
+		return "order id:" + orderId + " customer id:" + customerId;
 	}
 
 	
@@ -61,15 +61,15 @@ public class Order {
 		if (getClass() != obj.getClass())
 			return false;
 		Order other = (Order) obj;
-		if (orderId == null) {
-			if (other.orderId != null)
-				return false;
-		} else if (!orderId.equals(other.orderId))
-			return false;
 		if (customerId == null) {
 			if (other.customerId != null)
 				return false;
 		} else if (!customerId.equals(other.customerId))
+			return false;
+		if (orderId == null) {
+			if (other.orderId != null)
+				return false;
+		} else if (!orderId.equals(other.orderId))
 			return false;
 		return true;
 	}
