@@ -45,12 +45,13 @@ public class OrderDAOTest {
 		assertEquals(new Order(ID, 2L), DAO.read(ID));
 	}
 
-	@Test
-	public void testUpdate() {
-		final Order updated = new Order(1L, 4L);
-		assertEquals(updated, DAO.update(updated));
-
-	}
+//	ORDERS ARE ONLY ADDED AND DELETED. NEVER UPDATED
+//	@Test
+//	public void testUpdate() {
+//		final Order updated = new Order(1L, 4L);
+//		assertEquals(updated, DAO.update(updated));
+//
+//	}
 
 	@Test
 	public void testDelete() {
