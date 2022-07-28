@@ -8,7 +8,6 @@ public class Order {
 //	private Double orderTotal;
 	
 	// Constructor
-	
 	public Order(Long customerId) {
 		this.setCustomerId(customerId);
 	}
