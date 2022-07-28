@@ -1,3 +1,4 @@
+   
    drop schema ims;
 
    CREATE SCHEMA IF NOT EXISTS `ims`;
@@ -34,7 +35,6 @@
        PRIMARY KEY (`order_items_id`)
        FOREIGN KEY (`order_id`)
        FOREIGN KEY (`item_id`)
-       
   ); 
   
   
