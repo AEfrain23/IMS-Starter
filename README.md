@@ -1,4 +1,5 @@
-Coverage: 34%
+Coverage: 76.5%
+
 # IMS-Starter Application
 
 This Project is called IMS-Starter. The objective is to build a working application that allows a user to Create, Read, Update and Delete Customer, Items and Orders into the system database. This would allow a user to keep track of their customers and their customers purchases. 
