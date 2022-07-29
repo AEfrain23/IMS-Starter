@@ -1,13 +1,9 @@
 Coverage: 34%
 # IMS-Starter Application
 
-One Paragraph of project description goes here
-
 This Project is called IMS-Starter. The objective is to build a working application that allows a user to Create, Read, Update and Delete Customer, Items and Orders into the system database. This would allow a user to keep track of their customers and their customers purchases. 
 
 ## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 Project must be copied from GitHub. This can be done by the following commands on the terminal and ensuring you are in the file that you want the project to be uploaded to.
 
@@ -74,37 +70,25 @@ End with an example of getting some data out of the system or using it for a lit
 
 ## Running the tests
 
-Explain how to run the automated tests for this system. Break down into which tests and what they do
 
-In order to run the tests for each functionality, go into the relevant classes. i.e. 
+In order to run the tests right click on the project folder and go to *Run As*. Then click on a *JUnit Test*.
+This will display all the tests that were run in the project file for different sections of the system functionality. i.e. Customer, item and order CRUD functionality.
+You can see the individual tests for CREATE, READ, UPDATE and DELETE.
 
 
 ### Unit Tests 
 
-Explain what these tests test, why and how to run them
+These test test to ensure the code is doing what it is designed to do. e.g. the tests called testCreate are testing that the code is able to create a new customer, item or
+order into the system.
 
-```
-Give an example
-```
-
-### Integration Tests 
-Explain what these tests test, why and how to run them
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
 
 ## Deployment
 
 Add additional notes about how to deploy this on a live system
+
+## Project Management Board - Jira
+
+https://aefrain23.atlassian.net/jira/software/projects/IMSS/boards/11
 
 ## Built With
 
@@ -112,7 +96,7 @@ Add additional notes about how to deploy this on a live system
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning.
+We use Git and GitHub for versioning. Repository: https://github.com/AEfrain23/IMS-Starter.git
 
 ## Authors
 
